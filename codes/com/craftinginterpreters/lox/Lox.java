@@ -1,4 +1,4 @@
-package codes.com.craftinginterpreters.lox;
+package com.craftinginterpreters.lox;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -63,6 +63,6 @@ public class Lox {
     private static void report(int line, String where, String message) {
         System.err.println( "[line " + line + "] Error" + where + ": " + message);
         hadError = true;
-    }
+  }
 }
 
