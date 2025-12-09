@@ -39,10 +39,8 @@ public class GenerateAst {
     writer.close();
   }
 
-}
-
-private static void defineType(PrintWriter writer, String baseName,String className, String fieldList) {
-    writer.println("  static class " + className + " extends " +  baseName + " {");
+  private static void defineType(PrintWriter writer, String baseName, String className, String fieldList) {
+    writer.println("  static class " + className + " extends " + baseName + " {");
 
     // Constructor.
     writer.println("    " + className + "(" + fieldList + ") {");
@@ -55,6 +53,7 @@ private static void defineType(PrintWriter writer, String baseName,String classN
     }
 
     writer.println("    }");
+    
 
     // Fields.
     writer.println();
@@ -63,4 +62,5 @@ private static void defineType(PrintWriter writer, String baseName,String classN
     }
 
     writer.println("  }");
+  }
 }
